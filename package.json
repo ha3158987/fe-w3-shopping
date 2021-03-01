@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass shopping_how/public/stylesheets/main.scss shopping_how/public/stylesheets/style.css -w"
+    "compile:sass": "node-sass shopping_how/public/CSS/main.scss shopping_how/public/CSS/style.css -w"
   },
   "repository": {
     "type": "git",
