@@ -21,8 +21,8 @@ const caroselItemTemplate = (prefix, src, title, salePrice, percent, originPrice
 </li>`;
 
 export default class UIMaker {
-    constructor(_, reference){
-        this._ = _;
+    constructor(utill, reference){
+        this._ = utill;
         this.ref = reference;
         this.section = ['best', 'event', 'box', 'carousel'];
         this.pair = {

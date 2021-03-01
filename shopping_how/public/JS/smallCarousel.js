@@ -21,15 +21,15 @@ export default class smallCarousel {
         this.slide = reference.slide;
     }
 
-    addEvent(panelNumber){
-        this.prevButton.addEventListener('click', this.translateSlide.bind(this, 1, panelNumber));
-        this.nextButton.addEventListener('click', this.translateSlide.bind(this, -1, panelNumber));
+    addEvent(dataObj){
+        this.prevButton.addEventListener('click', this.translateSlide.bind(this, 1, dataObj.numOfPanel));
+        this.nextButton.addEventListener('click', this.translateSlide.bind(this, -1, dataObj.numOfPanel));
     }
 
-    translateSlide(direction, panelNumber){
+    translateSlide(direction, numOfPanel){
         const selectedBtn = (direction === 1) ? 'prev' : 'next';
         this.slide.style.transitionDuration = "300ms";
-        this.slide.style.transform = `translateX(${direction * (100 / panelNumber)}%)`;
+        this.slide.style.transform = `translateX(${direction * (100 / numOfPanel)}%)`;
         this.slide.ontransitionend = () => this.reorganizeEl(selectedBtn);
     }
 

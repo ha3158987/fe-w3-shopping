@@ -29,7 +29,7 @@ class Main {
         this.init()
     }
     init(){
-        this.smallCarousel.addEvent(3);
+        this.smallCarousel.addEvent({numOfPanel : 3});
         this.UIMaker.renderUI({dataSource : 'http://localhost:3000'});
     }
 }
