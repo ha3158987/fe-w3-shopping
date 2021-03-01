@@ -1,5 +1,5 @@
 /* --------------------------------------------------------------------- */
-/* --------▶︎▶︎▶︎ Template 클래스: 홈페이지에 필요한 템플릿을 만들고 띄운다. ◀︎◀︎◀︎--------*/
+/* --------▶︎▶︎▶︎ UIMaker 클래스: 홈페이지에 필요한 템플릿을 만들고 띄운다. ◀︎◀︎◀︎--------*/
 /* --------------------------------------------------------------------- */
 
 const boxTemplate = (prefix, src, title, content) => `
@@ -32,9 +32,9 @@ export default class UIMaker {
             "carousel": reference.items
         }
     }
-    renderUI(URL){
+    renderUI(dataObj){
         this.section.forEach(section => {
-            this.getEachData(URL, section);
+            this.getEachData(dataObj.dataSource, section);
         });
     }
     getEachData(URL, section){
