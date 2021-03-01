@@ -3,7 +3,7 @@
 /* --------------------------------------------------------------------- */
 
 /*
-- [ ] Template 클래스 생성해서 templating으로 DOM 채우기 (첫화면)
+- [x] Template 클래스 생성해서 templating으로 DOM 채우기 (첫화면)
 - [x] 캐러셀의 기본 이미지 띄워주기
 */
 
@@ -30,7 +30,7 @@ class Main {
     }
     init(){
         this.smallCarousel.addEvent(3);
-        this.UIMaker.renderUI('http://localhost:3000');
+        this.UIMaker.renderUI({dataSource : 'http://localhost:3000'});
     }
 }
 
